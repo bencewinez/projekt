@@ -1,0 +1,81 @@
+<div *ngIf="currentUsageconsumptionreport" class="edit-form">
+    <h4>Current Report:</h4>
+    <form>
+        <p>
+            <mat-form-field appearance="standard">
+                <mat-label>Bucket</mat-label>
+                <input 
+                matInput placeholder="bucket"
+                type="text"
+                class="form-control"
+                id="bucket"
+                required
+                [(ngModel)]="currentUsageconsumptionreport.bucket"
+                name="bucket"
+                />
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+                <mat-label>Href</mat-label>
+                <input 
+                matInput placeholder="href"
+                type="text"
+                class="form-control"
+                id="href"
+                required
+                [(ngModel)]="currentUsageconsumptionreport.href"
+                name="href"
+                />
+            </mat-form-field>
+        </p>
+        <p>  
+            <mat-form-field appearance="standard">
+                <mat-label>Product</mat-label>
+                <input 
+                matInput placeholder="product"
+                type="text"
+                class="form-control"
+                id="product"
+                required
+                [(ngModel)]="currentUsageconsumptionreport.product"
+                name="product"
+                />
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+                <mat-label>Status</mat-label>
+                <input 
+                matInput placeholder="status"
+                type="text"
+                class="form-control"
+                id="status"
+                required
+                [(ngModel)]="currentUsageconsumptionreport.status"
+                name="status"
+            />
+            </mat-form-field>
+        </p>
+
+        <div class="form-group">
+            <label><strong>Status:</strong></label>
+            {{ currentUsageconsumptionreport.published ? "Published" : "Pending" }}
+        </div>
+
+    </form>
+    
+    <button (click)="deleteUsageconsumptionreport()">
+      Delete
+    </button>
+  
+    <button type="submit" class="badge badge-success" (click)="updateUsageconsumptionreport()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  
+  <div *ngIf="!currentUsageconsumptionreport">
+    <br />
+    <p>Cannot access this Usageconsumptionreport...</p>
+  </div>

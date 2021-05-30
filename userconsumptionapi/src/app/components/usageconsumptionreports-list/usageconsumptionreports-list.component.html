@@ -1,0 +1,24 @@
+<div class="list row">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Select a report</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let usageconsumptionreport of usageconsumptionreports; let i = index" [class.active]="i == currentIndex" (click)="setActiveUsageconsumptionreport(usageconsumptionreport, i)">{{ usageconsumptionreport.href }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-6">
+      <div *ngIf="currentUsageconsumptionreport">
+        <app-usageconsumptionreport-details
+          (refreshList)="refreshList()"
+          [usageconsumptionreport]="currentUsageconsumptionreport"
+        ></app-usageconsumptionreport-details>
+      </div>
+  
+      <div *ngIf="!currentUsageconsumptionreport">
+        <br />
+      </div>
+    </div>
+  </div>
+

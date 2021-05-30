@@ -1,0 +1,78 @@
+<div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="bucket">Bucket</label>
+        <input
+          type="text"
+          class="form-control"
+          id="bucket"
+          required
+          [(ngModel)]="usageconsumptionreport.bucket"
+          name="bucket"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="href">href</label>
+        <input
+          type="text"
+          class="form-control"
+          id="href"
+          required
+          [(ngModel)]="usageconsumptionreport.href"
+          name="href"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="id">id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          required
+          [(ngModel)]="usageconsumptionreport.id"
+          name="id"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="product">product</label>
+        <input
+          type="text"
+          class="form-control"
+          id="product"
+          required
+          [(ngModel)]="usageconsumptionreport.product"
+          name="product"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="status">status</label>
+        <input
+          type="text"
+          class="form-control"
+          id="status"
+          required
+          [(ngModel)]="usageconsumptionreport.status"
+          name="status"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="published">published</label>
+        <input
+          type="text"
+          class="form-control"
+          id="published"
+          required
+          [(ngModel)]="usageconsumptionreport.published"
+          name="published"
+        />
+      </div>
+
+      <button (click)="saveUsageconsumptionreport('Report added successfully','OK')" class="btn btn-success">Submit</button>
+    </div>
+  
+  </div>
